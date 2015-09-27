@@ -4,7 +4,7 @@
 #
 Name     : oslo.serialization
 Version  : 1.9.0
-Release  : 12
+Release  : 13
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-1.9.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-1.9.0.tar.gz
 Summary  : Oslo Serialization library
@@ -24,6 +24,7 @@ BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
+BuildRequires : funcsigs-python
 BuildRequires : hacking
 BuildRequires : iso8601
 BuildRequires : linecache2-python
@@ -80,6 +81,9 @@ oslo.serialization
 %package python
 Summary: python components for the oslo.serialization package.
 Group: Default
+Requires: Babel-python
+Requires: pytz-python
+Requires: six-python
 
 %description python
 python components for the oslo.serialization package.
