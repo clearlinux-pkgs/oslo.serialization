@@ -4,7 +4,7 @@
 #
 Name     : oslo.serialization
 Version  : 2.4.0
-Release  : 23
+Release  : 24
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.4.0.tar.gz
 Summary  : Oslo Serialization library
