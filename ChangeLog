@@ -1,6 +1,43 @@
 CHANGES
 =======
 
+2.10.0
+------
+
+* Updated from global requirements
+
+2.9.0
+-----
+
+
+2.8.0
+-----
+
+* Replace TypeError by ValueError in msgpackutils
+* Support serializing ipaddress objs with jsonutils
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+2.7.0
+-----
+
+* Trivial: ignore openstack/common in flake8 exclude list
+
+2.6.0
+-----
+
+* [Trivial] Remove executable privilege of doc/source/conf.py
+
+2.5.0
+-----
+
+* Drop babel as requirement since its not used
+* Updated from global requirements
+* Unified and simplified API for all serializers
+* Make msgpack registries copyable (and add __contains__)
+* msgpack: fix datetime serialization
+
 2.4.0
 -----
 
@@ -87,7 +124,7 @@ CHANGES
 1.6.0
 -----
 
-* Revert "jsonutils: replace strtime(
+* Revert "jsonutils: replace strtime() usage with isoformat()"
 * jsonutils: encode dict keys
 * jsonutils: simplify simple value handling
 * jsonutils: replace strtime() usage with isoformat()
