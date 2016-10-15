@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.13.0
+------
+
+* Drop H803 in flake8 ignore list
+* Fix serialization of binary strings in Python3
+
 2.12.0
 ------
 

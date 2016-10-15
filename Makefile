@@ -1,5 +1,5 @@
 PKG_NAME := oslo.serialization
-URL := http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.12.0.tar.gz
+URL := http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.13.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
