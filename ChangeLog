@@ -1,6 +1,33 @@
 CHANGES
 =======
 
+2.17.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+* Update reno for stable/ocata
+* Remove references to Python 3.4
+
+2.16.0
+------
+
+* Prefer raising the python2.x type error for b64 decode errors
+* Add Constraints support
+* Don't raise TypeError for invalid b64
+* Replace six.iteritems() with .items()
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Show team and repo badges on README
+
+2.15.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+
 2.14.0
 ------
 
