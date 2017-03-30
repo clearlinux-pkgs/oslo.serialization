@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+2.18.0
+------
+
+* Use Sphinx 1.5 warning-is-error
+
 2.17.0
 ------
 
