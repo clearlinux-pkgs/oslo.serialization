@@ -1,6 +1,92 @@
 CHANGES
 =======
 
+2.27.0
+------
+
+* fix tox python3 overrides
+* Stop using encoding='utf-8' with msgpack
+
+2.26.0
+------
+
+* Unblock requirements changes
+* Remove stale pip-missing-reqs tox test
+* Trivial: Update pypi url to new url
+* set default python to python3
+* add lower-constraints job
+* Updated from global requirements
+
+2.25.0
+------
+
+* Follow the new PTI for document build
+* Update links in README
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* msgpack-python has been renamed to msgpack
+
+2.23.0
+------
+
+* Updated from global requirements
+* Add bandit to pep8 job
+
+2.22.0
+------
+
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Updated from global requirements
+
+2.21.2
+------
+
+* When serializing an exception return its 'repr'
+
+2.21.1
+------
+
+* jsonutils.to\_primitive(): add fallback parameter
+
+2.21.0
+------
+
+* Updated from global requirements
+* warn developers when can't convert value into primitive
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/pike
+* Updated from global requirements
+
+2.20.0
+------
+
+* Revert "Explicitly raise ValueError in to\_primitive"
+* Update URLs in documents according to document migration
+* rearrange existing documentation to fit the new standard layout
+* switch from oslosphinx to openstackdocstheme
+
+2.19.1
+------
+
+
+2.19.0
+------
+
+* Updated from global requirements
+* Don't iterate through addresses in netaddr.IPNetwork
+* Updated from global requirements
+* Updated from global requirements
+* Explicitly raise ValueError in to\_primitive
+* Updated from global requirements
+* Updated from global requirements
+
 2.18.0
 ------
 
@@ -22,7 +108,7 @@ CHANGES
 * Add Constraints support
 * Don't raise TypeError for invalid b64
 * Replace six.iteritems() with .items()
-* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
 * Show team and repo badges on README
 
 2.15.0
@@ -94,7 +180,7 @@ CHANGES
 * Drop babel as requirement since its not used
 * Updated from global requirements
 * Unified and simplified API for all serializers
-* Make msgpack registries copyable (and add __contains__)
+* Make msgpack registries copyable (and add \_\_contains\_\_)
 * msgpack: fix datetime serialization
 
 2.4.0
@@ -144,10 +230,10 @@ CHANGES
 ------
 
 * Add utilities for base64
-* Also check for the existence of `items` in to_primitive()
+* Also check for the existence of \`items\` in to\_primitive()
 * Move 'history' -> release notes section
-* Add jsonutils.dump_as_bytes() function for py3
-* Change ignore-errors to ignore_errors
+* Add jsonutils.dump\_as\_bytes() function for py3
+* Change ignore-errors to ignore\_errors
 * Updated from global requirements
 
 1.9.0
@@ -167,12 +253,12 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
-* Drop stale test - test_jsonutils
+* Drop stale test - test\_jsonutils
 
 1.7.0
 -----
 
-* Stop using deprecated oslo_utils.timeutils.strtime
+* Stop using deprecated oslo\_utils.timeutils.strtime
 * Add tox target to find missing requirements
 * Remove oslo namespace package
 * Do not use oslo namespace for oslo.i18n lib
@@ -188,9 +274,9 @@ CHANGES
 * jsonutils: simplify simple value handling
 * jsonutils: replace strtime() usage with isoformat()
 * Advertise support for Python3.4 / Remove support for Python 3.3
-* Do not sync run_cross_tests.sh
+* Do not sync run\_cross\_tests.sh
 * Updated from global requirements
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 * Fixes wrong folder for listing tests
 
 1.5.0
@@ -230,7 +316,7 @@ CHANGES
 -----
 
 * Move files out of the namespace package
-* Activate pep8 check that _ is imported
+* Activate pep8 check that \_ is imported
 * Updated from global requirements
 * Workflow documentation is now in infra-manual
 
@@ -255,7 +341,7 @@ CHANGES
 0.2.0
 -----
 
-* Check for namedtuple_as_object support before using it
+* Check for namedtuple\_as\_object support before using it
 * Work toward Python 3.4 support and testing
 
 0.1.0
@@ -268,7 +354,7 @@ CHANGES
 * Add some basic docstring(s)
 * Fix docs build to run properly
 * Use oslo libraries - i18n and utils
-* Specify namedtuple_as_object=False when using simplejson
+* Specify namedtuple\_as\_object=False when using simplejson
 * Get unit tests passing
 * exported from oslo-incubator by graduate.sh
 * Added missing jsonutils.dump() function
@@ -278,8 +364,8 @@ CHANGES
 * jsonutils.load() accepts file pointer, not string
 * On Python <= 2.6, use simplejson if available
 * Use oslotest instead of common test module
-* Python3: enable test_jsonutils.py
-* Use six.moves.xmlrpc_client instead of xmlrpclib
+* Python3: enable test\_jsonutils.py
+* Use six.moves.xmlrpc\_client instead of xmlrpclib
 * Translation Message improvements
 * Python3 support for xmlrpclib
 * Use six.iteritems to make dict work on Python2/3
@@ -291,23 +377,23 @@ CHANGES
 * Bump hacking to 0.7.0
 * Replace using tests.utils with openstack.common.test
 * Enable H302 hacking check
-* Add netaddr.IPAddress support to to_primitive()
+* Add netaddr.IPAddress support to to\_primitive()
 * python3: python3 binary/text data compatbility
 * Convert unicode for python3 portability
-* Optimise to_primitive common cases
+* Optimise to\_primitive common cases
 * Update to use flake8
 * Fix Copyright Headers - Rename LLC to Foundation
-* Don't LOG.error on max_depth (by default)
-* to_primitive imposes what seems to be an arbitary data structure depth of 3, but there is at least on case in Nova (Security group Rules) which requires a depth beyond this
-* Allow to_primitive to ignore datetimes
+* Don't LOG.error on max\_depth (by default)
+* to\_primitive imposes what seems to be an arbitary data structure depth of 3, but there is at least on case in Nova (Security group Rules) which requires a depth beyond this
+* Allow to\_primitive to ignore datetimes
 * Replace direct use of testtools BaseTestCase
 * Use testtools as test base class
 * Fixes import order errors
 * Make project pyflakes clean
-* Add missing convert_instances arg
-* Track to_primitive() depth after iteritems()
+* Add missing convert\_instances arg
+* Track to\_primitive() depth after iteritems()
 * Update iteritems test case to actually test iteritems
-* Use strtime() in to_primitive() for datetime objs
+* Use strtime() in to\_primitive() for datetime objs
 * Add 'filedecoder' method to the jsonutils wrapper module
 * Make jsonutils.dumps more general
 * Handle xmlrpclib.DateTime types when serializing to JSON
