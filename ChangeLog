@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+2.28.1
+------
+
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* import zuul job settings from project-config
+* py37: deal with Exception repr changes
+* Update reno for stable/rocky
+* Switch to stestr
+* Add release notes link to README
+
 2.27.0
 ------
 
