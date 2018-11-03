@@ -6,16 +6,16 @@
 #
 Name     : oslo.serialization
 Version  : 2.28.1
-Release  : 41
+Release  : 42
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz.asc
 Summary  : Oslo Serialization library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.serialization-python3
-Requires: oslo.serialization-license
-Requires: oslo.serialization-python
+Requires: oslo.serialization-license = %{version}-%{release}
+Requires: oslo.serialization-python = %{version}-%{release}
+Requires: oslo.serialization-python3 = %{version}-%{release}
 Requires: Sphinx
 Requires: msgpack
 Requires: openstackdocstheme
@@ -65,13 +65,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537928953
+export SOURCE_DATE_EPOCH=1541270993
 python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.serialization
-cp LICENSE %{buildroot}/usr/share/doc/oslo.serialization/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.serialization
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.serialization/LICENSE
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -82,7 +82,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/doc/oslo.serialization/LICENSE
+/usr/share/package-licenses/oslo.serialization/LICENSE
 
 %files python
 %defattr(-,root,root,-)
