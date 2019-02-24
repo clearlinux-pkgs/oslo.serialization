@@ -6,7 +6,7 @@
 #
 Name     : oslo.serialization
 Version  : 2.28.1
-Release  : 43
+Release  : 44
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz.asc
@@ -16,20 +16,20 @@ License  : Apache-2.0
 Requires: oslo.serialization-license = %{version}-%{release}
 Requires: oslo.serialization-python = %{version}-%{release}
 Requires: oslo.serialization-python3 = %{version}-%{release}
-Requires: Sphinx
 Requires: msgpack
-Requires: openstackdocstheme
 Requires: oslo.utils
 Requires: pbr
 Requires: pytz
-Requires: reno
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: https://governance.openstack.org/tc/badges/oslo.serialization.svg
+:target: https://governance.openstack.org/tc/ference/tags/index.html
 
 %package license
 Summary: license components for the oslo.serialization package.
@@ -65,7 +65,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541270993
+export SOURCE_DATE_EPOCH=1551028994
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
