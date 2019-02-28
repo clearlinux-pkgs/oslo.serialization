@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.serialization
-Version  : 2.28.1
-Release  : 44
-URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.1.tar.gz.asc
+Version  : 2.28.2
+Release  : 45
+URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.2.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.2.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.28.2.tar.gz.asc
 Summary  : Oslo Serialization library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -58,14 +58,14 @@ python3 components for the oslo.serialization package.
 
 
 %prep
-%setup -q -n oslo.serialization-2.28.1
+%setup -q -n oslo.serialization-2.28.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551028994
+export SOURCE_DATE_EPOCH=1551396139
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

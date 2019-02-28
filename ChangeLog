@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+2.28.2
+------
+
+* add python 3.7 unit test job
+* Update hacking version
+* Fix README
+* Use template for lower-constraints
+* Update mailinglist from dev to discuss
+* Clean up .gitignore references to personal tools
+* Update the home-page to latest
+
 2.28.1
 ------
 
