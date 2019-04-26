@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+2.29.0
+------
+
+* OpenDev Migration Patch
+* Update master for stable/stein
+* Introduce a base yaml parser for all openstack components
+
 2.28.2
 ------
 
