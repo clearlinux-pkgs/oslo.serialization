@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.29.1
+------
+
+* Replace git.openstack.org URLs with opendev.org URLs
+* Explicitly set default\_flow\_style to False
+
 2.29.0
 ------
 
