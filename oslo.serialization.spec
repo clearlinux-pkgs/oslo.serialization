@@ -6,7 +6,7 @@
 #
 Name     : oslo.serialization
 Version  : 2.29.1
-Release  : 48
+Release  : 49
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.29.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.29.1.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-2.29.1.tar.gz.asc
