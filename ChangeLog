@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.29.2
+------
+
+* Add Python 3 Train unit tests
+* Cap sphinx for py2 to match global requirements
+* Sync Sphinx requirement
+* Resolve some issue with tox.ini, setup.cfg
+* Dropping the py35 testing
+
 2.29.1
 ------
 
