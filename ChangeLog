@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+3.0.0
+-----
+
+* [ussuri][goal] Drop python 2.7 support and testing
+* tox: Trivial cleanup
+* Switch to Ussuri jobs
+* tox: Keeping going with docs
+* Update master for stable/train
+
 2.29.2
 ------
 

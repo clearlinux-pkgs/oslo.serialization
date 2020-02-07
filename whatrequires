@@ -13,7 +13,10 @@ nova
 oslo.log
 oslo.messaging
 oslo.policy
+oslo.reports
+oslo.versionedobjects
 osprofiler
+python-barbicanclient
 python-designateclient
 python-keystoneclient
 python-magnumclient
