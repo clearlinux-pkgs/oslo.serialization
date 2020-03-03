@@ -18,8 +18,11 @@ oslo.policy
 oslo.reports
 oslo.versionedobjects
 osprofiler
+pycadf
 python-barbicanclient
+python-ceilometerclient
 python-designateclient
+python-heatclient
 python-keystoneclient
 python-magnumclient
 python-manilaclient

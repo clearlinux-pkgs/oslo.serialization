@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+3.1.0
+-----
+
+* Remove long-dead workaround
+* Deprecated the yamlutils module
+* Update the minversion parameter
+* remove outdated header
+* reword releasenote for py27 support dropping
+
 3.0.0
 -----
 
