@@ -6,7 +6,7 @@
 #
 Name     : oslo.serialization
 Version  : 3.0.0
-Release  : 53
+Release  : 54
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.0.0.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.0.0.tar.gz.asc
@@ -34,8 +34,32 @@ BuildRequires : six
 ========================
 Team and repository tags
 ========================
+
 .. image:: https://governance.openstack.org/tc/badges/oslo.serialization.svg
-:target: https://governance.openstack.org/tc/ference/tags/index.html
+    :target: https://governance.openstack.org/tc/ference/tags/index.html
+
+.. Change things from this point on
+
+===================
+ oslo.serialization
+===================
+
+.. image:: https://img.shields.io/pypi/v/oslo.serialization.svg
+    :target: https://pypi.org/project/oslo.serialization/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslo.serialization.svg
+    :target: https://pypi.org/project/oslo.serialization/
+    :alt: Downloads
+
+The oslo.serialization library provides support for representing objects
+in transmittable and storable formats, such as Base64, JSON and MessagePack.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/oslo.serialization/latest/
+* Source: https://opendev.org/openstack/oslo.serialization
+* Bugs: https://bugs.launchpad.net/oslo.serialization
+* Release notes: https://docs.openstack.org/releasenotes/oslo.serialization/
 
 %package license
 Summary: license components for the oslo.serialization package.
@@ -58,6 +82,7 @@ python components for the oslo.serialization package.
 Summary: python3 components for the oslo.serialization package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslo.serialization)
 
 %description python3
 python3 components for the oslo.serialization package.
@@ -72,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581038854
+export SOURCE_DATE_EPOCH=1583194785
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
