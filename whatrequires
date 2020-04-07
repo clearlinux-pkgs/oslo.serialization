@@ -1,17 +1,14 @@
 # This file contains recursive sources that require this package
-barbican
 cinder
 cursive
 glance_store
 heat
-horizon
 ironic
 ironic-lib
 keystone
 keystonemiddleware
 neutron
 neutron-lib
-nova
 oslo.log
 oslo.messaging
 oslo.policy
@@ -31,7 +28,6 @@ python-neutronclient
 python-novaclient
 python-saharaclient
 python-senlinclient
-sahara
 taskflow
 tempest
 tooz

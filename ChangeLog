@@ -1,10 +1,19 @@
 CHANGES
 =======
 
+3.1.1
+-----
+
+* Update hacking for Python3
+* Use unittest.mock instead of third party mock
+* Remove Python 3-specific conditional in dump\_as\_bytes
+* Drop use of six
+
 3.1.0
 -----
 
 * Remove long-dead workaround
+* Add releasenote to deprecate the yamlutils module
 * Deprecated the yamlutils module
 * Update the minversion parameter
 * remove outdated header

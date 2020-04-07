@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.serialization
-Version  : 3.1.0
-Release  : 55
-URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.0.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.0.tar.gz.asc
+Version  : 3.1.1
+Release  : 56
+URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.1.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.1.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-3.1.1.tar.gz.asc
 Summary  : Oslo Serialization library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -22,7 +22,6 @@ Requires: msgpack
 Requires: oslo.utils
 Requires: pbr
 Requires: pytz
-Requires: six
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
 BuildRequires : debtcollector
@@ -30,38 +29,13 @@ BuildRequires : msgpack
 BuildRequires : oslo.utils
 BuildRequires : pbr
 BuildRequires : pytz
-BuildRequires : six
 
 %description
 ========================
 Team and repository tags
 ========================
-
 .. image:: https://governance.openstack.org/tc/badges/oslo.serialization.svg
-    :target: https://governance.openstack.org/tc/ference/tags/index.html
-
-.. Change things from this point on
-
-===================
- oslo.serialization
-===================
-
-.. image:: https://img.shields.io/pypi/v/oslo.serialization.svg
-    :target: https://pypi.org/project/oslo.serialization/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/oslo.serialization.svg
-    :target: https://pypi.org/project/oslo.serialization/
-    :alt: Downloads
-
-The oslo.serialization library provides support for representing objects
-in transmittable and storable formats, such as Base64, JSON and MessagePack.
-
-* Free software: Apache license
-* Documentation: https://docs.openstack.org/oslo.serialization/latest/
-* Source: https://opendev.org/openstack/oslo.serialization
-* Bugs: https://bugs.launchpad.net/oslo.serialization
-* Release notes: https://docs.openstack.org/releasenotes/oslo.serialization/
+:target: https://governance.openstack.org/tc/ference/tags/index.html
 
 %package license
 Summary: license components for the oslo.serialization package.
@@ -85,21 +59,27 @@ Summary: python3 components for the oslo.serialization package.
 Group: Default
 Requires: python3-core
 Provides: pypi(oslo.serialization)
+Requires: pypi(msgpack)
+Requires: pypi(pytz)
+Requires: pypi(pyyaml)
+Requires: pypi(pbr)
+Requires: pypi(debtcollector)
+Requires: pypi(oslo.utils)
 
 %description python3
 python3 components for the oslo.serialization package.
 
 
 %prep
-%setup -q -n oslo.serialization-3.1.0
-cd %{_builddir}/oslo.serialization-3.1.0
+%setup -q -n oslo.serialization-3.1.1
+cd %{_builddir}/oslo.serialization-3.1.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583249095
+export SOURCE_DATE_EPOCH=1586273472
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -116,7 +96,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.serialization
-cp %{_builddir}/oslo.serialization-3.1.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.serialization/57aed0b0f74e63f6b85cce11bce29ba1710b422b
+cp %{_builddir}/oslo.serialization-3.1.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.serialization/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
