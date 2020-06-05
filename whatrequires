@@ -2,7 +2,6 @@
 cinder
 cursive
 glance_store
-heat
 ironic
 ironic-lib
 keystone
