@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+4.0.1
+-----
+
+* Bump bandit version
+* Update openstackdocstheme
+
 4.0.0
 -----
 
@@ -14,6 +20,7 @@ CHANGES
 * Switch to newer openstackdocstheme and reno versions
 * Remove the unused coding style modules
 * Remove translation sections from setup.cfg
+* Align contributing doc with oslo's policy
 * Bump default tox env from py37 to py38
 * Add py38 package metadata
 * Add release notes links to doc index
