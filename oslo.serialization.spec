@@ -6,7 +6,7 @@
 #
 Name     : oslo.serialization
 Version  : 4.0.1
-Release  : 59
+Release  : 60
 URL      : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-4.0.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-4.0.1.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.serialization/oslo.serialization-4.0.1.tar.gz.asc
